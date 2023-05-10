@@ -1,0 +1,77 @@
+﻿@model IEnumerable<DisplayUpdateData.Models.StoreModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>StoreData</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.store_code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.store_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.store_type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.region)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.store_code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.store_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.store_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.region)
+            </td>
+            <td>
+                    <a href="@Url.Action("Updateemp", new { id = item.id })"><img src=".../wwwroot/NewFolder/create-black-18dp.svg"></a>
+                   @* @Html.ActionLink("Details", "GetEmployeeData", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

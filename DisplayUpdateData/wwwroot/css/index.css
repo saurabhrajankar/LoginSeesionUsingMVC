@@ -1,0 +1,32 @@
+﻿.Loginmain {
+    margin-top: 0px;
+    margin-left: -432px;
+    width: 100%;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    /*background-image: url(../../wwwroot/NewFolder/6.jpg);
+    background-size: cover;
+    border-color: #1861ac;*/
+    /* border: solid 4px #30a70c;*/
+}
+.custom-password {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+/*.MainContainer {
+    border: #d51041;
+    display: flex;*/
+    /* flex-direction: column; */
+    /*justify-content: center;
+    align-items: center;
+    margin-top: 134px;
+}*/

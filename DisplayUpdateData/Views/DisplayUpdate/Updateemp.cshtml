@@ -1,0 +1,68 @@
+﻿@model DisplayUpdateData.Models.StoreModel
+
+@{
+    ViewData["Title"] = "Updateemp";
+}
+
+<h1>Updateemp</h1>
+
+<h4>StoreModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Updateemp">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" readonly />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="store_code" class="control-label"></label>
+                <input asp-for="store_code" class="form-control" />
+                <span asp-validation-for="store_code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="store_name" class="control-label"></label>
+                <input asp-for="store_name" class="form-control" />
+                <span asp-validation-for="store_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="state" class="control-label"></label>
+                <input asp-for="state" class="form-control" />
+                <span asp-validation-for="state" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="city" class="control-label"></label>
+                <input asp-for="city" class="form-control" />
+                <span asp-validation-for="city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pin" class="control-label"></label>
+                <input asp-for="Pin" class="form-control" />
+                <span asp-validation-for="Pin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="store_type" class="control-label"></label>
+                <input asp-for="store_type" class="form-control" />
+                <span asp-validation-for="store_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="region" class="control-label"></label>
+                <input asp-for="region" class="form-control" />
+                <span asp-validation-for="region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
